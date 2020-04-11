@@ -14,20 +14,21 @@ header
     text-align: right
   
   .button
-    display: block
     margin: 50px
     margin-top: 20vw
     align-self: flex-end
 
 .section-1
+  position: relative
+  z-index: 3
   .logo-wrapper
     display: block
     width: 100vw
   .logo
     display: block
-    width: 80vw
+    width: 50vw
     margin: auto
-    margin-top: -12vw
+    margin-top: -8vw
 
   .wrapper  
     margin: auto  
@@ -36,6 +37,7 @@ header
       padding: 5vw
       margin: auto
       max-width: 400px
+      font-size: 1.2vw
     
     .button
       display: block
@@ -45,5 +47,54 @@ header
     max-height: 645px
     margin: auto
     margin-right: 0
-  
 
+.section-2
+  position: relative
+  z-index: 2
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  width: 100vw
+  min-height: 70vw
+  background-color: $background-blue
+  transform: skew(0deg, 10deg)
+  p, .sub-wrapper
+    transform: skew(0deg, -10deg)
+    margin: 80px
+    font-size: 38pt
+    color: white
+    font-weight: bold
+  p
+    width: 30vw
+    margin-top: 100px
+  .sub-wrapper
+    button, label, input
+      display: block
+      margin: auto
+      width: 45vw
+      
+    button
+      margin: 20px auto
+  .floaty
+    transform: skew(0deg, -10deg)
+    position: absolute
+    width: 90vw
+    bottom: -18vw
+    left: 0
+    right: 0
+    display: block
+    margin: auto
+  
+.section-3
+  position: relative
+  top: -18vw
+  width: 100vw
+  height: 70vw
+  z-index: 1
+  background-color: $background-grey
+  transform: skew(0deg, -10deg)
+
+  
+  
+   
