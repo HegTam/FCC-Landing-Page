@@ -14,20 +14,21 @@ header
     text-align: right
   
   .button
-    display: block
     margin: 50px
     margin-top: 20vw
     align-self: flex-end
 
 .section-1
+  position: relative
+  z-index: 3
   .logo-wrapper
     display: block
     width: 100vw
   .logo
     display: block
-    width: 80vw
+    width: 50vw
     margin: auto
-    margin-top: -12vw
+    margin-top: -8vw
 
   .wrapper  
     margin: auto  
@@ -48,17 +49,19 @@ header
     margin-right: 0
 
 .section-2
+  position: relative
+  z-index: 2
   display: flex
   flex-wrap: wrap
   justify-content: center
-  align-content: center
+  align-items: center
   width: 100vw
+  min-height: 70vw
   background-color: $background-blue
   transform: skew(0deg, 10deg)
-  z-index: -1
   p, .sub-wrapper
     transform: skew(0deg, -10deg)
-    margin: 20px
+    margin: 80px
     font-size: 38pt
     color: white
     font-weight: bold
@@ -74,4 +77,23 @@ header
     button
       margin: 20px auto
   
+.section-3
+  position: relative
+  top: -18vw
+  width: 100vw
+  height: 70vw
+  z-index: 1
+  background-color: $background-grey
+  transform: skew(0deg, -10deg)
 
+  .floaty
+    position: absolute
+    top: -80vw
+    width: 90vw
+    left: 0
+    right: 0
+    z-index: 3
+    display: block
+    margin: auto
+  
+   

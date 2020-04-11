@@ -408,8 +408,9 @@ a:hover, a:focus {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .section-1 .pot1 {
     display: inline;
@@ -432,8 +433,9 @@ a:hover, a:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .section-1 .logo {
     position: relative;
@@ -464,11 +466,15 @@ header h1 {
 }
 
 header .button {
-  display: block;
   margin: 50px;
   margin-top: 20vw;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.section-1 {
+  position: relative;
+  z-index: 3;
 }
 
 .section-1 .logo-wrapper {
@@ -478,9 +484,9 @@ header .button {
 
 .section-1 .logo {
   display: block;
-  width: 80vw;
+  width: 50vw;
   margin: auto;
-  margin-top: -12vw;
+  margin-top: -8vw;
 }
 
 .section-1 .wrapper {
@@ -507,6 +513,8 @@ header .button {
 }
 
 .section-2 {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -515,19 +523,20 @@ header .button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
+  min-height: 70vw;
   background-color: #173c51;
   -webkit-transform: skew(0deg, 10deg);
           transform: skew(0deg, 10deg);
-  z-index: -1;
 }
 
 .section-2 p, .section-2 .sub-wrapper {
   -webkit-transform: skew(0deg, -10deg);
           transform: skew(0deg, -10deg);
-  margin: 20px;
+  margin: 80px;
   font-size: 38pt;
   color: white;
   font-weight: bold;
@@ -546,5 +555,27 @@ header .button {
 
 .section-2 .sub-wrapper button {
   margin: 20px auto;
+}
+
+.section-3 {
+  position: relative;
+  top: -18vw;
+  width: 100vw;
+  height: 70vw;
+  z-index: 1;
+  background-color: #d7d7d7;
+  -webkit-transform: skew(0deg, -10deg);
+          transform: skew(0deg, -10deg);
+}
+
+.section-3 .floaty {
+  position: absolute;
+  top: -80vw;
+  width: 90vw;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: block;
+  margin: auto;
 }
 /*# sourceMappingURL=main.css.map */
