@@ -557,6 +557,18 @@ header .button {
   margin: 20px auto;
 }
 
+.section-2 .floaty {
+  -webkit-transform: skew(0deg, -10deg);
+          transform: skew(0deg, -10deg);
+  position: absolute;
+  width: 90vw;
+  bottom: -18vw;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: auto;
+}
+
 .section-3 {
   position: relative;
   top: -18vw;
@@ -566,16 +578,5 @@ header .button {
   background-color: #d7d7d7;
   -webkit-transform: skew(0deg, -10deg);
           transform: skew(0deg, -10deg);
-}
-
-.section-3 .floaty {
-  position: absolute;
-  top: -80vw;
-  width: 90vw;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  display: block;
-  margin: auto;
 }
 /*# sourceMappingURL=main.css.map */
