@@ -367,8 +367,11 @@ header h1 {
   font-size: 5rem;
 }
 
+.section-1 .button {
+  font-size: 2.5rem;
+}
+
 .section-2 p {
-  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -407,8 +410,8 @@ a:hover, a:focus {
 }
 
 @media screen and (max-width: 599px) {
-  .section-1 .button {
-    display: block;
+  .section-1 .wrapper {
+    max-width: 70vw;
   }
   .section-1 .pot2 {
     display: none;
@@ -416,15 +419,8 @@ a:hover, a:focus {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1199px) {
-  .section-1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .section-1 .wrapper {
+    max-width: 70vw;
   }
   .section-1 .pot1 {
     display: inline;
@@ -437,22 +433,43 @@ a:hover, a:focus {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .section-1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+  .section-1 .wrapper {
+    max-width: 70vw;
   }
   .section-1 .logo {
     position: relative;
+  }
+  .section-1 .pot2 {
+    display: none;
+  }
+  .section-5 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .section-1 .wrapper {
+    max-width: 50vw;
+  }
+  .section-1 .pot2 {
+    display: inline-block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  .section-5 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -489,6 +506,17 @@ header .button {
 .section-1 {
   position: relative;
   z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section-1 .logo-wrapper {
@@ -496,7 +524,7 @@ header .button {
   width: 100vw;
 }
 
-.section-1 .logo {
+.section-1 .logo-wrapper .logo {
   display: block;
   width: 50vw;
   margin: auto;
@@ -504,14 +532,15 @@ header .button {
 }
 
 .section-1 .wrapper {
+  display: inline-block;
   margin: auto;
 }
 
 .section-1 .wrapper p {
   display: block;
-  padding: 5vw;
+  padding: 1vw;
   margin: auto;
-  max-width: 50vw;
+  text-align: center;
 }
 
 .section-1 .wrapper .button {
@@ -519,8 +548,17 @@ header .button {
   margin: 50px auto 50px;
 }
 
-.section-1 .pot2 {
+.section-1 .pot1, .section-1 .pot2 {
   margin: auto;
+  width: 20vw;
+}
+
+.section-1 .pot1 {
+  margin-left: 0;
+  display: inline-block;
+}
+
+.section-1 .pot2 {
   margin-right: 0;
 }
 
@@ -616,30 +654,54 @@ header .button {
 .section-5 {
   position: relative;
   margin-top: -30vw;
-  display: block;
-  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 1;
-  display: inline-block;
-  box-sizing: border-box;
+}
+
+.section-5 div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+      grid-template-areas: "icon title" ". content";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: 100%;
   padding: 2vw;
 }
 
-.section-5 img {
+.section-5 div img {
   display: inline-block;
-  width: 10%;
-  margin: 10px;
+  width: 4em;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.section-5 h1 {
+.section-5 div h2 {
   display: inline-block;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+  margin: auto 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.section-5 p {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+.section-5 div p {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
   max-width: 90%;
 }
 
