@@ -1,11 +1,16 @@
 @media screen and (max-width: 599px)
   .section-1
+    flex-direction: column
     .wrapper
-      max-width: 70vw
+      max-width: 100vw
             
     .pot2
       display: none
 
+  .section-2
+    flex-direction: column
+    .sub-wrapper, p
+      width: 80vw
   
 
 @media screen and (min-width: 600px) and (max-width: 1199px)
@@ -22,7 +27,9 @@
     .pot2
       display: none
 
-      
+  .section-2
+    .sub-wrapper, p
+      width: 50vw   
 
 @media screen and (min-width: 1200px) and (max-width: 1499px)
   .section-1
@@ -39,6 +46,10 @@
     grid-template-rows: 1fr 1fr
     grid-template-columns: 1fr 1fr
 
+  .section-2
+    .sub-wrapper, p
+      width: 50vw
+
 @media screen and (min-width: 1500px)
   .section-1
     .wrapper
@@ -48,6 +59,10 @@
       display: inline-block
       position: sticky
       top: 0
+
+  .section-2
+    .sub-wrapper, p
+      width: 50vw  
 
   .section-5
     display: grid
