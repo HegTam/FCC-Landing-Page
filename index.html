@@ -7,14 +7,19 @@
     <title>Maier's Cookware</title>
   </head>
   <body>
-    <header>
+    <header id=header>
+      <nav id="nav-bar">
+        <ul>
+          <li><a href="#header" class="nav-link">Home</a></li>
+          <li><a href="#subscribe" class="nav-link">Subscribe</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+        </ul>
+      </nav>
       <h1>THE VERY BEST IN NON-STICK FAT FREE COOKWARE</h1>
       <button name="Buy Now" class="button">Buy Now</button>
+      <img src="assets\img\Maier's-Cookware_logo.png"  alt="Company logo" class="logo" id="header-img">
     </header>
     <section class="section-1">
-      <div class="logo-wrapper">
-      <img src="assets\img\Maier's-Cookware_logo.png"  alt="Company logo" class="logo">
-    </div>
       <img src="assets\img\pot1.png" alt="pot" class="pot1">
       <div class="wrapper">
         <p>
@@ -36,18 +41,18 @@
       </div>
       <img src="assets\img\pot2.jpg" alt="pot" class="pot2">
     </section>
-    <section class="section-2">
+    <section class="section-2" id="subscribe">
       <p>
         Want to stay up to date with new recipes and product launches? Subscribe
         to our newsletter!
       </p>
-      <div class="sub-wrapper">
+      <form action="https://www.freecodecamp.com/email-submit" class="sub-wrapper" id="form">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required size="10" />
+        <input type="text" id="name" name="name" class="input-are" autocomplete="name" placeholder="John Doe" required/>
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required size="10" />
-        <button name="Subscribe" class="button">Subscribe</button>
-      </div>
+        <input type="email" id="email" name="email" class="input-are" autocomplete="email" placeholder="johndoe@email.com" required/>
+        <input type="submit" value="Subscribe" name="Subscribe"  id="submit" class="button"/>
+      </form>
       <img class="floaty" src="assets\img\deluxe set-2699 99 - 2199 99.png" alt="">
     </section>
     <section class="section-3">
@@ -107,6 +112,38 @@
         </p>
       </div>
     </section>
-    <footer>&copy; Copyright 2020 Hegedűs Tamás</footer>
+    <section id="about">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I83Psw78D4E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <footer>
+      <table>
+        <tr>
+          <th>About</a></th> 
+          <th>Help</a></th>
+          <th>Connect</a></th>
+        </tr>
+        <tr>
+          <td><a href="">About Us</a></td>
+          <td><a href="">Help Center</a></td>
+          <td><a href="">Facebook</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Blog</a></td>
+          <td><a href="">Get Started</a></td>
+          <td><a href="">Twitter</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Privacy Policy</a></td>
+          <td><a href="">Contact Us</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="">Terms of Service</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <p>&copy; Copyright 2020 Hegedűs Tamás</p>
+    </footer>
   </body>
 </html>
